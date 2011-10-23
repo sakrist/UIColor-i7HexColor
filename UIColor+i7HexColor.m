@@ -3,6 +3,7 @@
 //  
 //
 //  Created by Jonas Schnelli on 01.07.10.
+//  Modified by Vladimir Boichentsov on 23.10.11.
 //  Copyright 2010 include7 AG. All rights reserved.
 //
 
@@ -11,7 +12,7 @@
 
 @implementation UIColor (i7HexColor)
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString {
++ (UIColor *) colorWithHexString:(NSString *)hexString {
 	
 	/* convert the string into a int */
 	unsigned int colorValueR,colorValueG,colorValueB,colorValueA;
@@ -46,5 +47,18 @@
 	
 
 }
+
++ (UIColor *) colorWithIntegerRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+
+    if (alpha > 1 ) {
+        alpha = alpha/255.f;
+    }
+    
+    return [UIColor colorWithRed:red/255.f
+                           green:green/255.f
+                            blue:blue/255.f
+                           alpha:alpha];
+}
+
 
 @end
