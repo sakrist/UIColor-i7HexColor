@@ -12,6 +12,27 @@
 
 @implementation UIColor (i7HexColor)
 
+
++ (UIColor* ) colorWithHex:(int)color {
+
+    int red = (thecolor & 0xff000000) >> 24;
+    int green = (thecolor & 0x00ff0000) >> 16;
+    int blue = (thecolor & 0x0000ff00) >> 8;
+    int alpha = (thecolor & 0x000000ff);
+    
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
++ (UIColor *) colorWithHexRed:(int)red green:(char)green blue:(char)blue alpha:(char)alpha {
+    int x = 0;
+    x |= (red & 0xff) << 24;
+    x |= (green & 0xff) << 16;
+    x |= (blue & 0xff) << 8;
+    x |= (alpha & 0xff);
+    return [UIColor colorWithHex:x];
+}
+
+
 + (UIColor *) colorWithHexString:(NSString *)hexString {
 	
 	/* convert the string into a int */
