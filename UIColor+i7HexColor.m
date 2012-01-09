@@ -15,10 +15,10 @@
 
 + (UIColor* ) colorWithHex:(int)color {
 
-    int red = (thecolor & 0xff000000) >> 24;
-    int green = (thecolor & 0x00ff0000) >> 16;
-    int blue = (thecolor & 0x0000ff00) >> 8;
-    int alpha = (thecolor & 0x000000ff);
+    int red = (color & 0xff000000) >> 24;
+    int green = (color & 0x00ff0000) >> 16;
+    int blue = (color & 0x0000ff00) >> 8;
+    int alpha = (color & 0x000000ff);
     
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
