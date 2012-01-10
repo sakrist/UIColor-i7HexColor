@@ -15,12 +15,12 @@
 
 + (UIColor* ) colorWithHex:(int)color {
 
-    int red = (color & 0xff000000) >> 24;
-    int green = (color & 0x00ff0000) >> 16;
-    int blue = (color & 0x0000ff00) >> 8;
-    int alpha = (color & 0x000000ff);
+    float red = (color & 0xff000000) >> 24;
+    float green = (color & 0x00ff0000) >> 16;
+    float blue = (color & 0x0000ff00) >> 8;
+    float alpha = (color & 0x000000ff);
     
-    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha/255.0];
 }
 
 + (UIColor *) colorWithHexRed:(int)red green:(char)green blue:(char)blue alpha:(char)alpha {
