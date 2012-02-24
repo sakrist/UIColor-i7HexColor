@@ -12,8 +12,13 @@
 
 @implementation UIColor (i7HexColor)
 
+- (NSString *) hexString {
+    const CGFloat *_color = CGColorGetComponents(self.CGColor);
+    NSString *hex = [NSString stringWithFormat:@"#%02X%02X%02X", (int)(_color[0]*255.0), (int)(_color[1]*255.0), (int)(_color[2]*255.0)];
+    return hex;
+}
 
-+ (UIColor* ) colorWithHex:(int)color {
++ (UIColor *) colorWithHex:(int)color {
 
     float red = (color & 0xff000000) >> 24;
     float green = (color & 0x00ff0000) >> 16;

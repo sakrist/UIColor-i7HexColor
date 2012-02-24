@@ -12,7 +12,9 @@
 
 @interface UIColor (i7HexColor)
 
-+ (UIColor* ) colorWithHex:(int)color;
+- (NSString *) hexString;
+
++ (UIColor *) colorWithHex:(int)color;
 + (UIColor *) colorWithHexRed:(int)red green:(char)green blue:(char)blue alpha:(char)alpha;
 
 + (UIColor *) colorWithHexString:(NSString *)hexString;
