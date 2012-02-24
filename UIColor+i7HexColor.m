@@ -13,8 +13,10 @@
 @implementation UIColor (i7HexColor)
 
 - (NSString *) hexString {
+	
     const CGFloat *_color = CGColorGetComponents(self.CGColor);
     NSString *hex = [NSString stringWithFormat:@"#%02X%02X%02X", (int)(_color[0]*255.0), (int)(_color[1]*255.0), (int)(_color[2]*255.0)];
+    
     return hex;
 }
 
