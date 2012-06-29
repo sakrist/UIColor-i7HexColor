@@ -8,6 +8,10 @@ label.textColor = [UIColor colorWithHexString:@"f00"]; // red color
 label.textColor = [UIColor colorWithHexString:@"ff000055"]; // red color with some alpha 
 ---
 
+or 
+UIColor *redColor = [UIColor colorWithHex:0xff0000ff];
+
+
 Version
 =======
 0.2
