@@ -10,34 +10,25 @@ label.textColor = [UIColor colorWithHexString:@"ff000055"]; // red color with so
 
 Version
 =======
-0.11
+0.2
 
 License
 =======
 BSD
 
-Changelog
-==========
-07/01/2010 – Version 0.1 - package started
-08/13/2010 – Version 0.11 - + fixed huge problem when hex color string starts with "0".
 
 Author
 ======
 Jonas Schnelli / include7 AG - www.include7.ch
+
+Edited by
+======
 Vladimir Boichentsov  - http://www.developers-life.com/uicolor-from-hex.html
 
 
-		     	_            __          __  _____
-			   (_)___  _____/ /_  ______/ /_/__  /
-			  / / __ \/ ___/ / / / / __  / _ \/ /
-			 / / / / / /__/ / /_/ / /_/ /  __/ /
-			/_/_/ /_/\___/_/\__,_/\__,_/\___/_/........
-
-		
-
 URL
 ===
-http://github.com/jonasschnelli/UIColor-i7HexColor
+https://github.com/sakrist/UIColor-i7HexColor
 
 Info
 ====
